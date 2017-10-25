@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Increment - JS</title>
+  </head>
+
+  <body>
+    <div>
+      <span>Value:&nbsp;</span>
+      <span id="displayed-value">0</span>
+      <button id="increment-button">Edith really wants to increment</button>
+      <button id="decrement-button">Edith really wants to decrement now!</button>
+    </div>
+
+    <script type="text/javascript">
+      var increment = function() {
+        var button = document.getElementById("increment-button")
+
+          button.addEventListener("click", function(event) {
+            displayedValue = document.getElementById("displayed-value");
+
+            displayedValue.innerHTML = parseInt(displayedValue.innerHTML) + 1;
+          });
+      };
+
+      var decrement = function() {
+        var button = document.getElementById("decrement-button")
+
+        button.addEventListener("click", function(event) {
+          displayedValue = document.getElementById("displayed-value");
+
+          displayedValue.innerHTML = parseInt(displayedValue.innerHTML) - 1;
+        });
+      };
+
+      increment();
+      decrement();
+    </script>
+  </body>
+</html>
